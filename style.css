@@ -1,0 +1,91 @@
+html, body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif; /* Adding a modern font */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f1c40f, #f39c12); /* Gradient background */
+    color: #333;
+}
+
+/* Create a responsive flex layout for the overall structure */
+#container {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around; /* Adds space between the sections */
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the network containers */
+#mynetwork, #container2 {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#mynetwork {
+    width: 45%;
+    height: 100%;
+    background-color: #ffffff;
+    border: 1px solid lightgray;
+}
+
+#container2 {
+    width: 45%;
+    height: 100%;
+    background-color: #ffffff;
+    border: 1px solid lightgray;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 20px;
+}
+
+/* Styling for buttons */
+#generate-graph, #solve {
+    margin: 20px auto;
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background-color: #f39c12;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#generate-graph:hover, #solve:hover {
+    background-color: #e67e22;
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+#topText {
+    margin-left: 40%;
+    font-size: 24px;
+    color: #2c3e50;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    #container {
+        flex-direction: column;
+    }
+
+    #mynetwork, #container2 {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    #topText {
+        font-size: 20px;
+        margin-left: 0;
+    }
+}
